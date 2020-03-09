@@ -1,18 +1,8 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import styles from './index.module.css'
 import Head from 'next/head'
 
-import Pimello from '../components/pimello'
-import Clicker from '../components/clicker'
-
-const getPosts = `
-  query {
-    post(id: 1) {
-      id
-      title
-    }
-  }
-`
+import CustomElement from '../components/frame-element'
 
 const Home = () => {
   useEffect(() => {
@@ -22,15 +12,16 @@ const Home = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>I/O marriage</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Pimello />
+      <CustomElement />
       <main className={styles.main}>
         <h1 className='title'>
-          Welcome to <a href='https://nextjs.org'>Next.js!</a>
+          What shall become a beautiful marriage between{' '}
+          <a href='https://nextjs.org'>Next.js</a> and{' '}
+          <a href='https://preactjs.com'>Preact!</a>
         </h1>
-        <Clicker />
       </main>
       <style jsx global>{`
         html,
